@@ -2,6 +2,7 @@
     "name": "POS Refund User Restriction",
     "version": "16.0.1.0.0",
     "category": "Point of Sale",
+    "author": "Abdurrachman Basurroh",
     "summary": "Batasi retur POS hanya untuk user yang dipilih",
     "license": "LGPL-3",
     "images": [
