@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_pos_order_form_refund_restriction" model="ir.ui.view">
+        <field name="name">pos.order.form.refund.restriction</field>
+        <field name="model">pos.order</field>
+        <field name="inherit_id" ref="point_of_sale.view_pos_pos_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//button[@name='refund']" position="attributes">
+                <attribute name="attrs">
+                    {'invisible': ['|', ('user_can_refund', '=', False), '|', ('state', '=', 'draft'), ('has_refundable_lines', '=', False)]}
+                </attribute>
+            </xpath>
+            <xpath expr="//field[@name='has_refundable_lines']" position="after">
+                <field name="user_can_refund" invisible="1"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

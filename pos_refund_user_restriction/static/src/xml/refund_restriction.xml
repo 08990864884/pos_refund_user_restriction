@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-inherit="point_of_sale.RefundButton" t-inherit-mode="extension" owl="1">
+        <xpath expr="//div[contains(@class, 'control-button')]" position="attributes">
+            <attribute name="t-if">env.pos.user.allow_pos_refund</attribute>
+        </xpath>
+    </t>
+
+    <t t-inherit="point_of_sale.TicketScreen" t-inherit-mode="extension" owl="1">
+        <xpath expr="//ActionpadWidget[@actionToTrigger=&quot;'do-refund'&quot;]" position="attributes">
+            <attribute name="t-if">env.pos.user.allow_pos_refund</attribute>
+        </xpath>
+    </t>
+</templates>
