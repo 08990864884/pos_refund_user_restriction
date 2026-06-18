@@ -20,8 +20,6 @@
             "pos_refund_user_restriction/static/src/xml/refund_restriction.xml",
         ],
     },
-    "price": 5.50,
-    "currency": "USD",
     "installable": True,
     "application": False,
 }
